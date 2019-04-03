@@ -1,0 +1,91 @@
+Z nie checia przyznaje, ze umozliwienie procesom wchadzacym do monitora zejecie pierwszej pozycji powododuje zwiekszenie odchylenia standardowego czasu cozekiwania procesow
+Nie mierzylem czasu oczekiwania procesow, a ilosc wykonaynych operacji produce,consume z przyzyn technicznych.
+
+Zasadniczo wymuszenie na nowych procesach wejscia do poczekalni (jesli jest tam ktokolwiek inny) i w ten sposob oddania czasu procesora,
+praktycznie idealnie wyrownuje zuzycie procesow
+
+Brak powoduje zachwiania rzedu 50% od "przecietnej". Przecietny rpoces uznajemy za ten ktory abosolutnie losowo wybiera liczbe elementow.
+
+
+Standardowy producent poprostu losuje rozmiar miedzy 1 a 100. Specjalny miedzy Average-maxDev+1 a Averag+maxDev
+
+
+
+Wynik bez przejmowania sie ta mozliwoscia :
+Special Producent finished: average=95, maxDeviation=5, timesProduced=11948
+Special Producent finished: average=95, maxDeviation=5, timesProduced=10081
+Special Producent finished: average=5, maxDeviation=5, timesProduced=16938
+Special Producent finished: average=5, maxDeviation=5, timesProduced=16998
+Special Producent finished: average=25, maxDeviation=25, timesProduced=18863
+Special Producent finished: average=25, maxDeviation=25, timesProduced=18117
+Special Producent finished: average=75, maxDeviation=25, timesProduced=16974
+Special Producent finished: average=75, maxDeviation=25, timesProduced=20695
+Standard Producent finished: timesProduced=19610
+Standard Producent finished: timesProduced=17666
+Standard Producent finished: timesProduced=19879
+Standard Producent finished: timesProduced=18699
+Standard Producent finished: timesProduced=30513
+Standard Producent finished: timesProduced=21678
+Standard Producent finished: timesProduced=21297
+Standard Producent finished: timesProduced=20982
+
+
+Special Consument finished: average=95, maxDeviation=5, timesProduced=12707
+Special Consument finished: average=95, maxDeviation=5, timesProduced=15902
+Special Consument finished: average=5, maxDeviation=5, timesProduced=24166
+Special Consument finished: average=5, maxDeviation=5, timesProduced=19855
+Special Consument finished: average=25, maxDeviation=25, timesProduced=31824
+Special Consument finished: average=25, maxDeviation=25, timesProduced=29990
+Special Consument finished: average=75, maxDeviation=25, timesProduced=15607
+Special Consument finished: average=75, maxDeviation=25, timesProduced=14089
+Standard Consument finished: consumedTimes 18903
+Standard Consument finished: consumedTimes 17247
+Standard Consument finished: consumedTimes 18508
+Standard Consument finished: consumedTimes 18200
+Standard Consument finished: consumedTimes 22426
+Standard Consument finished: consumedTimes 20808
+Standard Consument finished: consumedTimes 24064
+Standard Consument finished: consumedTimes 15595
+
+
+Wynik z przejmowaniem sie 
+
+Special Producent finished: average=95, maxDeviation=5, timesProduced=25654
+Special Producent finished: average=95, maxDeviation=5, timesProduced=25658
+Special Producent finished: average=5, maxDeviation=5, timesProduced=25716
+Special Producent finished: average=5, maxDeviation=5, timesProduced=25717
+Special Producent finished: average=25, maxDeviation=25, timesProduced=25680
+Special Producent finished: average=25, maxDeviation=25, timesProduced=25712
+Special Producent finished: average=75, maxDeviation=25, timesProduced=25685
+Special Producent finished: average=75, maxDeviation=25, timesProduced=25682
+Standard Producent finished: timesProduced=25699
+Standard Producent finished: timesProduced=25697
+Standard Producent finished: timesProduced=25701
+Standard Producent finished: timesProduced=25699
+Standard Producent finished: timesProduced=25698
+Standard Producent finished: timesProduced=25702
+Standard Producent finished: timesProduced=25702
+Standard Producent finished: timesProduced=25697
+
+
+Special Consument finished: average=95, maxDeviation=5, timesProduced=25710
+Special Consument finished: average=95, maxDeviation=5, timesProduced=25693
+Special Consument finished: average=5, maxDeviation=5, timesProduced=25715
+Special Consument finished: average=5, maxDeviation=5, timesProduced=25716
+Special Consument finished: average=25, maxDeviation=25, timesProduced=25705
+Special Consument finished: average=25, maxDeviation=25, timesProduced=25713
+Special Consument finished: average=75, maxDeviation=25, timesProduced=25708
+Special Consument finished: average=75, maxDeviation=25, timesProduced=25701
+Standard Consument finished: consumedTimes 25707
+Standard Consument finished: consumedTimes 25705
+Standard Consument finished: consumedTimes 25707
+Standard Consument finished: consumedTimes 25695
+Standard Consument finished: consumedTimes 25704
+Standard Consument finished: consumedTimes 25706
+Standard Consument finished: consumedTimes 25704
+Standard Consument finished: consumedTimes 25704
+test Concluded, taken 5,705000 seconds
+
+
+
+
